@@ -23,14 +23,13 @@ for (let i = 0; i < lesBtns.length; i++) {
         console.log("moi: " + monChoix)
         let nombreAlea = getRandomInt(0, choix.length)
         sonChoix = choix[nombreAlea]
-        console.log("chr: " + sonChoix)
-        affSon.textContent = "Chrome a joué : " + sonChoix
+        console.log("ordi: " + sonChoix)
+        affSon.textContent = "Ordi a joué : " + sonChoix
         if ((monChoix == "pierre" && sonChoix == "ciseaux") ||
             (monChoix == "ciseaux" && sonChoix == "feuille") ||
             (monChoix == "feuille" && sonChoix == "pierre")) {
             affResult.textContent = "gagné"
             affResult.style.backgroundColor = "pink"
-            affResult.style.transform = "scale(2)"
             monTot++
         }
         else if ((monChoix == "ciseaux" && sonChoix == "pierre") ||
@@ -38,13 +37,12 @@ for (let i = 0; i < lesBtns.length; i++) {
             (monChoix == "pierre" && sonChoix == "feuille")) {
             affResult.textContent = "perdu"
             affResult.style.backgroundColor = "grey"
-            affResult.style.transform = "scale(0.5)"
             sonTot++
         }
         else {
             affResult.textContent = "égalité"
         }
-        affTot.textContent = "moi: " + monTot + " / chr: " + sonTot
+        affTot.textContent = "moi: " + monTot + " / ordi: " + sonTot
 
     })
 }
